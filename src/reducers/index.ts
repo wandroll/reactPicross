@@ -1,13 +1,8 @@
-
-
 import { History } from 'history';
 import { combineReducers } from 'redux';
-import {
-  connectRouter,
-  RouterState,
-} from 'connected-react-router';
+import { connectRouter, RouterState } from 'connected-react-router';
 
-import { GeneralState, generalDefaultState, generalReducer } from './general';
+import { GeneralState, generalDefaultState, generalReducer } from './general';
 import { GameState, gameDefaultState, gameReducer } from './game';
 
 export interface IGlobalState {
@@ -32,13 +27,11 @@ export const getDefaultState = (): IGlobalState => ({
   game: gameDefaultState,
 });
 
-
-const createRootReducer = (history: History) => 
+const createRootReducer = (history: History) =>
   combineReducers({
     router: connectRouter(history),
     general: generalReducer,
     game: gameReducer,
-});
+  });
 
 export default createRootReducer;
-

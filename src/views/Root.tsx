@@ -1,11 +1,7 @@
 /* tslint:disable jsx-no-lambda */
 import { History } from 'history';
 import React, { Fragment } from 'react';
-import {
-  Route,
-  Switch,
-  Redirect,
-} from 'react-router-dom';
+import { Route, Switch, Redirect } from 'react-router-dom';
 import routes from '../routes';
 import { ConnectedRouter } from 'connected-react-router';
 
@@ -21,7 +17,7 @@ const Root = ({ history }: Props) => (
       <Switch>
         <Route
           path={routes.newGame()}
-          render={() => <NewGameViewContainer/>}
+          render={() => <NewGameViewContainer />}
         />
         <Redirect from={routes.root()} to={routes.newGame()} />
       </Switch>

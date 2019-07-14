@@ -1,17 +1,17 @@
 import { connect } from 'react-redux';
 
-import {
-    getBoardGame,
-} from '../../selectors';
+import { getBoardGame } from '../../selectors';
 
 import NewGameView from './NewGameView';
 import { IGlobalState } from '../../reducers';
 
 const mapStateToProps = (state: IGlobalState) => ({
-  boardGame: getBoardGame(state) 
+  boardGame: getBoardGame(state),
 });
 
-const mapDispatchToProps = {
-};
+const mapDispatchToProps = {};
 
-export default connect(mapStateToProps, mapDispatchToProps)(NewGameView);
+export default connect(
+  mapStateToProps,
+  mapDispatchToProps
+)(NewGameView);

@@ -1,5 +1,4 @@
 export default {
-    root: () => '/',
-    newGame: () => '/game/new',
+  root: () => '/',
+  newGame: () => '/game/new',
 };
-  

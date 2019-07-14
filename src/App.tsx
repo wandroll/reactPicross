@@ -11,9 +11,9 @@ const store = storeFactory({ history });
 const App: React.FC = () => {
   return (
     <Provider store={store}>
-      <Root history={history}/>
+      <Root history={history} />
     </Provider>
   );
-}
+};
 
 export default App;

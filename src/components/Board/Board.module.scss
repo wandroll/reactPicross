@@ -1,0 +1,22 @@
+.wrapper{
+    background: white;
+    padding:  4rem;
+}
+
+.vertical{
+    width: 1em;
+    line-height: 1;
+    vertical-align: bottom;
+}
+
+.horizontal {
+    text-align: end;
+}
+
+table {
+    border-collapse: collapse;
+  }
+  
+table, th, td {
+    border: 1px solid black;
+}

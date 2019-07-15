@@ -9,9 +9,10 @@ import styles from './Board.module.scss';
 
 export interface BoardProps {
   boardGame: BoardGame;
+  toggleCell: (i: number, j: number) => void;
 }
 
-const Board = ({ boardGame }: BoardProps) => (
+const Board = ({ boardGame, toggleCell }: BoardProps) => (
   <div className={styles.wrapper}>
     <table>
       <thead>
@@ -23,11 +24,11 @@ const Board = ({ boardGame }: BoardProps) => (
         ))}
       </thead>
       <tbody>
-        {boardGame.cells.map(row => (
+        {boardGame.cells.map((row, rowIndex) => (
           <tr>
             <td className={styles.horizontal}>{computeRowIndication(row)}</td>
-            {row.map(item => (
-              <Cell item={item} />
+            {row.map((item, itemIndex) => (
+              <Cell key={itemIndex} item={item} onToggle={() => toggleCell(rowIndex, itemIndex)} />
             ))}
           </tr>
         ))}

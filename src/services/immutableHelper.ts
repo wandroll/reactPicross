@@ -9,3 +9,6 @@ export function replaceAt<T>(array: T[], index: number, value: T): T[] {
   ret[index] = value;
   return ret;
 }
+export function replaceAt2D<T>(array: T[][], rowIndex: number, itemIndex: number, value: T): T[][] {
+  return replaceAt(array, rowIndex, replaceAt(array[rowIndex], itemIndex, value));
+}

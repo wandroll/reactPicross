@@ -1,0 +1,4 @@
+export const TOGGLE_FILL_CELL = 'TOGGLE_FILL_CELL';
+export const SELECT_GAME = 'SELECT_GAME';
+export const RESET_GAME ='RESET_GAME';
+export const TOGGLE_CROSS_FILL = 'TOGGLE_CROSS_FILL';
